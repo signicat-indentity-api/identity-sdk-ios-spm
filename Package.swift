@@ -1,24 +1,35 @@
-// swift-tools-version: 6.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
-    name: "identity-sdk-ios-spm",
+    name: "IdentitySDK",
+    platforms: [
+        .iOS(.v15)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "identity-sdk-ios-spm",
-            targets: ["identity-sdk-ios-spm"]),
+       .library(
+           name: "IdentitySDK",
+           targets: ["IdentitySDKWrapper"]
+       )
+    ],
+    dependencies: [
+        .package(url: "https://github.com/signicat/videoidskd-spm.git", exact: "1.38.1")
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "identity-sdk-ios-spm"),
-        .testTarget(
-            name: "identity-sdk-ios-spmTests",
-            dependencies: ["identity-sdk-ios-spm"]
-        ),
+           name: "IdentitySDKWrapper",
+           dependencies: [
+               .target(name: "IdentitySDK"),
+               .product(name: "VideoIDSDK", package: "videoidskd-spm")
+           ],
+           path: "Sources/IdentitySDKWrapper"
+       ),
+
+       /// The binary XCFramework target
+       .binaryTarget(
+           name: "IdentitySDK",
+           url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.2.3.zip",
+           checksum: "eb3781a2f6a01fcb97612d8f4978db22774c917cf8cdda810b13ba1acce53064"
+       )
     ]
 )

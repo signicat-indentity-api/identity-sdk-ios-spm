@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "IdentitySDK",
     platforms: [
-        .iOS(.v15_1)
+        .iOS("15.1")
     ],
     products: [
        .library(

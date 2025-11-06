@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "IdentitySDK",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15_1)
     ],
     products: [
        .library(
@@ -13,7 +13,7 @@ let package = Package(
        )
     ],
     dependencies: [
-        .package(url: "https://github.com/signicat/videoidskd-spm.git", exact: "1.38.1")
+        .package(url: "https://github.com/signicat/videoidskd-spm.git", exact: "1.45.0")
     ],
     targets: [
         .target(
@@ -28,8 +28,8 @@ let package = Package(
        /// The binary XCFramework target
        .binaryTarget(
            name: "IdentitySDK",
-           url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.2.5.zip",
-           checksum: "21f81ae2606d164d4a26a8d9c6b268fae65a412e47411e6a339b30d95d019005"
+           url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.3.0.zip",
+           checksum: "990d38c015cf645a629970d4a6209dec66410d6f0598acd96c3a98dceeb088fc"
        )
     ]
 )

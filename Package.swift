@@ -29,7 +29,7 @@ let package = Package(
        .binaryTarget(
            name: "IdentitySDK",
            url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.5.0.zip",
-           checksum: "7d91e8170290e2be6ba4d5464f8e7e9ad43f38769c36a9cb2cae2ce62e2963f5"
+           checksum: "2131a090d8b0fe85cc50122ef0c3004f5cba7b9de0a6fddfb0663f44d807373c"
        )
     ]
 )

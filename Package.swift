@@ -13,7 +13,7 @@ let package = Package(
        )
     ],
     dependencies: [
-        .package(url: "https://github.com/signicat/videoidskd-spm.git", exact: "1.47.0")
+        .package(url: "https://github.com/signicat/videoidskd-spm.git", exact: "26.4.0")
     ],
     targets: [
         .target(
@@ -28,8 +28,8 @@ let package = Package(
        /// The binary XCFramework target
        .binaryTarget(
            name: "IdentitySDK",
-           url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.5.1.zip",
-           checksum: "832ed77422d5db39351e08304abcbd35cd6b31a29e57c36860c0eb9dcdf95f11"
+           url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.6.0.zip",
+           checksum: "e501d428705ef4a61b9e93b9f2683cb82900e3f62276d21420a6836dace794e6"
        )
     ]
 )

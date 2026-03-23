@@ -28,8 +28,8 @@ let package = Package(
        /// The binary XCFramework target
        .binaryTarget(
            name: "IdentitySDK",
-           url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.7.1.zip",
-           checksum: "3dbecbc7d10ce4aebb33040fe79b5b1c3271d2abcaee109aa4092ee372584526"
+           url: "https://github.com/signicat-indentity-api/identity-sdk-ios/archive/refs/tags/v3.7.2.zip",
+           checksum: "3f51d2f2aaf8795da574bc87d7ec9fd983a686f3f4bff9343a1938167c39a2dd"
        )
     ]
 )
